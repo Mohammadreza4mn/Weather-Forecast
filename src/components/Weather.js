@@ -1,5 +1,6 @@
 import React from 'react';
 
+let main, icon = '50d';
 class Weather extends React.Component {
 
   constructor(props) {
@@ -57,14 +58,10 @@ class Weather extends React.Component {
           }
         }
       )
-      let description=this.state.city_weather.map(item => {
-         return item.description
-      });
-      let query = `sky,nature,${description}`;
-      const per_page = '4';
-      const orientation = 'squarish';
-      let page = Math.floor(Math.random() * 100);
-      fetch(`https://api.unsplash.com/search/photos/?client_id=_PddIXc9E6hWsR9-ItExkNG46hXQiu8JjJNZVE46O5s&query=${query}&per_page=${per_page}&orientation=${orientation}&page=${page}`)
+      let query = `${main} sky`;
+      const per_page = '8';
+      let page = Math.floor(Math.random() * (100-1))+1;
+      fetch(`https://api.unsplash.com/search/photos/?client_id=_PddIXc9E6hWsR9-ItExkNG46hXQiu8JjJNZVE46O5s&query=${query}&per_page=${per_page}&page=${page}`)
       .then(res => res.json())
       .then(
         json => {
@@ -78,27 +75,37 @@ class Weather extends React.Component {
   }
 
   render() {
-    let main, icon='50d';
     this.state.city_weather.map(item => {
       main = item.main
       icon = item.icon
     });
     let city_temperature=Object.values(this.state.city_temperature);
     let city_wind=Object.values(this.state.city_wind);
+    
     let urlPic = [];
     this.state.pic.map(
       item => (
         urlPic.push(item.urls.small)
       )
     )
+
+    const checkTemperature=()=>{
+      if(city_temperature[0]<=10){return "linear-gradient(to bottom, #00d1ff, #c471ed, #fff0f1)" }
+      else if(city_temperature[0]<=20){return "linear-gradient(to bottom, #38dbff, #c471ed, #ffadb3)" }
+      else if(city_temperature[0]<=30){return "linear-gradient(to bottom, #70e5ff, #c471ed, #ff707b)" }
+      else if(city_temperature[0]>=30){return "linear-gradient(to bottom, #b5f2ff, #c471ed, #ff1729)" }
+      else{return "linear-gradient(to bottom, #12c2e9, #c471ed, #f64f59)" }
+    }
+    const gradient={//style #gradient
+      background:checkTemperature()
+    }
+
     return (
         <div className="container">
           <div className="row justify-content-center align-content-center vh-100">
             <div className="card bg-dark col-md-8 h-50 border">
               <div className="row h-100 align-items-end">
-                <div className="col-md-6 p-0" id="side01" style={{backgroundImage : `url(${urlPic[1]})`}}>
-                  <div id="gradient">
-                  </div>
+                <div className="col-md-6 p-0" id="gradient" style={gradient} >
                   <div className="card-img-overlay text-light d-flex align-items-center justify-content-between">
                     <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} />
                     <div className="d-flex flex-column align-items-end">
@@ -142,11 +149,23 @@ class Weather extends React.Component {
                     </div>
                   </div>
                 </div>
-                <a className="badge-light badge mt-2" href="https://openweathermap.org">
+                <a className="badge-light badge mt-2" target="_blank" href="https://openweathermap.org">
                   <small>
                     OpenWeather API
             </small>
                 </a>
+              </div>
+            </div>
+            <div className="col-md-4 d-none d-md-block gallery">
+              <div className="grid d-flex flex-column flex-wrap align-items-center">
+                <img src={urlPic[1]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[0]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[2]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[3]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[4]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[5]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[6]} className="img-fluid shadow-lg rounded border m-1"/>
+                <img src={urlPic[7]} className="img-fluid shadow-lg rounded border m-1"/>
               </div>
             </div>
           </div>
