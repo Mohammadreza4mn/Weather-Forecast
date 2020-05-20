@@ -8,12 +8,13 @@
         background-color: #343d4b;
     }
     #gradient{
-        background: #1e9600;
-        background: linear-gradient(to bottom, #FF0000, #FFF200, #1E9600);
+        background: #607494;
         height: 100%;
-        opacity: 0.4 ;
     }
-    #side01{
-        background-size: cover;
-        height: 100%;
+    .grid{
+        max-height: 100%;
+        max-width: 30%;
+    }
+    .gallery{
+        max-height: 50%;
     }
