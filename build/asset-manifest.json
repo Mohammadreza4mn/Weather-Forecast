@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/jellyfish/weather-forecast/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/jellyfish/weather-forecast/static/js/main.3de306d9.chunk.js",
+    "main.js.map": "/jellyfish/weather-forecast/static/js/main.3de306d9.chunk.js.map",
+    "runtime-main.js": "/jellyfish/weather-forecast/static/js/runtime-main.4cd821a6.js",
+    "runtime-main.js.map": "/jellyfish/weather-forecast/static/js/runtime-main.4cd821a6.js.map",
+    "static/js/2.799af8e9.chunk.js": "/jellyfish/weather-forecast/static/js/2.799af8e9.chunk.js",
+    "static/js/2.799af8e9.chunk.js.map": "/jellyfish/weather-forecast/static/js/2.799af8e9.chunk.js.map",
+    "index.html": "/jellyfish/weather-forecast/index.html",
+    "precache-manifest.06f903928b179427dc02d8a508f78dc9.js": "/jellyfish/weather-forecast/precache-manifest.06f903928b179427dc02d8a508f78dc9.js",
+    "service-worker.js": "/jellyfish/weather-forecast/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/jellyfish/weather-forecast/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.799af8e9.chunk.js.LICENSE.txt": "/jellyfish/weather-forecast/static/js/2.799af8e9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4cd821a6.js",
+    "static/js/2.799af8e9.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.3de306d9.chunk.js"
+  ]
+}

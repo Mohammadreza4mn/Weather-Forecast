@@ -1,0 +1,20 @@
+    @font-face {
+        font-family: Vazir;
+        src: url(Vazir.ttf);
+    }
+    body {
+        font-family: Vazir;
+        transition: 0.5s;
+        background-color: #343d4b;
+    }
+    #gradient{
+        background: #607494;
+        height: 100%;
+    }
+    .grid{
+        max-height: 100%;
+        max-width: 30%;
+    }
+    .gallery{
+        max-height: 50%;
+    }
