@@ -158,6 +158,9 @@ class Weather extends React.Component {
             </div>
             <div className="col-md-4 d-none d-md-block gallery">
               <div className="grid d-flex flex-column flex-wrap align-items-center">
+                <a href="https://github.com/mohammadreza4mn" target="_blank" className="m-1" title="Github">
+                <img src="public/../assets/img/m.m.jpg" className="img-fluid shadow-lg rounded border"/>
+                </a>
                 <img src={urlPic[1]} className="img-fluid shadow-lg rounded border m-1"/>
                 <img src={urlPic[0]} className="img-fluid shadow-lg rounded border m-1"/>
                 <img src={urlPic[2]} className="img-fluid shadow-lg rounded border m-1"/>
