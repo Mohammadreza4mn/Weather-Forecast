@@ -5,8 +5,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:<br />
+
 :arrow_down: Before running:<br />
-1.edit package.json line 5 ("homepage": "https://mohammadreza4mn.github.io/Weather-Forecast"), I suggest deleting this line if you want to run the project on localhost.
+1. Edit `package.json` line 5 ("homepage": "https://mohammadreza4mn.github.io/Weather-Forecast"), I suggest deleting this line if you want to run the project on localhost.
 
 ### `npm start`
 
