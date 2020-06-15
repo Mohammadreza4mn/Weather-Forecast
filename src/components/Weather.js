@@ -103,7 +103,7 @@ class Weather extends React.Component {
     return (
         <div className="container">
           <div className="row justify-content-center align-content-center vh-100">
-            <div className="card bg-dark col-md-8 h-50 border">
+            <div className="card bg-dark col-md-8 border">
               <div className="row h-100 align-items-end">
                 <div className="col-md-6 p-0" id="gradient" style={gradient} >
                   <div className="card-img-overlay text-light d-flex align-items-center justify-content-between">
@@ -156,7 +156,7 @@ class Weather extends React.Component {
                 </a>
               </div>
             </div>
-            <div className="col-md-4 d-none d-md-block gallery">
+            <div className="col-md-3 d-none d-md-block gallery">
               <div className="grid d-flex flex-column flex-wrap align-items-center">
                 <a href="https://github.com/mohammadreza4mn" target="_blank" className="m-1" title="Github">
                 <img src="public/../assets/img/m.m.jpg" className="img-fluid shadow-lg rounded border"/>
