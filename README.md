@@ -1,6 +1,7 @@
 # About Weather Forecast :sun_behind_rain_cloud: <br/>
 using [api unsplash](https://unsplash.com/developers) :framed_picture: & [api openweathermap](https://openweathermap.org/api) :artificial_satellite: <br />
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br/>
+:man_facepalming: Due to unsplash being a filter, I suggest using a vpn to run the program correctly and completely
 
 ## Available Scripts
 
